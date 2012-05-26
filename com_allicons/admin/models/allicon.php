@@ -35,9 +35,7 @@ class AllIconsModelAllIcon extends JModelAdmin
 	protected function canDelete($record)
 	{
 		if (!empty($record->id)) {
-			if ($record->state != -2) {
-				return ;
-			}
+		
 			$user = JFactory::getUser();
 
 			if ($record->catid) {
